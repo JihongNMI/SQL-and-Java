@@ -17,15 +17,25 @@ day가 'sun'인 행들의 dayno 중 가장 큰 값을 가져온다
 1개월치 전체 달력을 만들 수 있습니다.
 
 SELECT
+
   MAX(DECODE(day, 'SUN', dayno)) AS SUN,
+  
   MAX(DECODE(day, 'MON', dayno)) AS MON,
+  
   MAX(DECODE(day, 'TUE', dayno)) AS TUE,
+  
   MAX(DECODE(day, 'WED', dayno)) AS WED,
+  
   MAX(DECODE(day, 'THU', dayno)) AS THU,
+  
   MAX(DECODE(day, 'FRI', dayno)) AS FRI,
+  
   MAX(DECODE(day, 'SAT', dayno)) AS SAT
+  
 FROM cal
+
 GROUP BY weekno
+
 ORDER BY weekno;
 
 🤷‍♀️잘 나오는데 궁금한게 있어 weekno로 그룹을 지정했다고 하는데, weekno는 결과 표시가 안나오네?
@@ -63,14 +73,20 @@ MAX가 가장 흔히 쓰이고 무난해서 대부분 예제나 코드에서 MAX
 
 ✨
 product	month	amount
+
 A	Jan	100
+
 A	Feb	150
+
 B	Jan	200
+
 B	Feb	250
+
 
 이걸 피벗하면?
 
 피벗 쿼리
+
 SELECT *
 FROM sales
 PIVOT (
@@ -80,7 +96,9 @@ PIVOT (
 
 결과
 product	Jan	Feb
+
 A	100	150
+
 B	200	250
 
 FOR month IN ('Jan', 'Feb')가
