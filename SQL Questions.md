@@ -128,3 +128,33 @@ PIVOT은 FOR에 지정한 컬럼의 값을 기준으로 열을 만들기 때문�
 그 열은 항상 NULL로 나오거나
 
 에러가 발생할 수 있습니다.
+
+# 3. DECODE를 쓰는 이유
+
+🤷‍♀️기본 emp테이블에서 부서별로 각 직급별 인원이 몇명인지 계산하기
+
+✨
+✅ 방법 1: PIVOT 사용
+✅ 방법 2: GROUP BY + DECODE (옛날 방식)
+SELECT
+  deptno,
+  COUNT(DECODE(job, 'CLERK', 1))     AS CLERK,
+  COUNT(DECODE(job, 'SALESMAN', 1))  AS SALESMAN,
+  COUNT(DECODE(job, 'MANAGER', 1))   AS MANAGER,
+  COUNT(DECODE(job, 'ANALYST', 1))   AS ANALYST,
+  COUNT(DECODE(job, 'PRESIDENT', 1)) AS PRESIDENT
+FROM emp
+GROUP BY deptno
+
+🤷‍♀️pivot을 안쓴다고 가정했을 때 방법은 decode를 꼭 써야하나?
+
+✨
+✅ 가능한 대안들 (Oracle 기준)
+방법	설명
+DECODE	전통적인 Oracle 방식 (가장 널리 쓰임)
+CASE WHEN	DECODE보다 더 범용적이고 가독성 좋음, ✅ 표준 SQL 구문
+FILTER	일부 DBMS에서만 지원 (Oracle은 ❌)
+
+🤷‍♀️지금 decode를 쓰는건 clerk 등을 숫자로 바꾸고 싶어서인건가?
+
+✨직급(job) 값들을 숫자(1 또는 NULL)로 바꿔서, COUNT, SUM 등 집계 함수로 세기 쉽게 만들기 위해서입니다.
