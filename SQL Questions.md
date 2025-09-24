@@ -182,3 +182,14 @@ SELECT deptno, job, empno FROM emp	❌ 안 됨	PIVOT은 FROM 절에서 바로 �
 SELECT * FROM (SELECT deptno, job, empno FROM emp)	✅ 됨	이 형태는 FROM (subquery) 안에서 데이터를 먼저 만들어서, 그 위에 PIVOT을 적용 가능
 
 Oracle에서 PIVOT 문법의 위치는 FROM 절 안입니다.
+
+# 5. 정렬 문구는 결국 넣어야 한다
+
+🤷‍♀️SELECT empno, ename, job, sal, rank() OVER (ORDER BY sal) FROM emp; 그러고보니 정렬이 알아서 되네
+
+✨
+윈도우 함수의 ORDER BY만 있을 때	순위 계산은 제대로 되지만, 출력 순서는 보장 안 됨
+전체 쿼리 마지막에 ORDER BY 있을 때	출력 결과가 확실히 정렬됨
+
+그래서 보통은 안전하게 결과를 정렬하고 싶으면,
+윈도우 함수와 별개로 쿼리 마지막에 ORDER BY를 꼭 씁니다!
