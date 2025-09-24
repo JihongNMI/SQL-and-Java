@@ -158,3 +158,27 @@ FILTER	일부 DBMS에서만 지원 (Oracle은 ❌)
 🤷‍♀️지금 decode를 쓰는건 clerk 등을 숫자로 바꾸고 싶어서인건가?
 
 ✨직급(job) 값들을 숫자(1 또는 NULL)로 바꿔서, COUNT, SUM 등 집계 함수로 세기 쉽게 만들기 위해서입니다.
+
+# 4. PIVOT 이해 2 : FROM에
+
+🤷‍♀️음 이상하네 select * from emp pivot ( count(empno) for job in ('CLERK', 'MANAGER', 'PRESIDENT', 'ANALYST', 'SALESMAN') ) ORDER BY deptno; 이거 하니까 ename mgr hiredate...comm 까지 나온 뒤에 deptno clerk가 나와
+
+✨🔍 왜 그런 일이 벌어졌을까?
+
+PIVOT은 FROM 절에서 들어온 데이터셋에 대해 피벗을 적용합니다.
+
+SELECT * FROM emp처럼 바로 테이블을 주면,
+
+Oracle은 모든 열을 다 가져온 다음,
+
+피벗된 값들을 그냥 추가 열로 덧붙이는 방식으로 동작하는 것처럼 보입니다.
+
+사실상 이는 Oracle의 내부 처리 방식의 유연성이지, 일반적인 권장 방식은 아닙니다.
+
+🤷‍♀️SELECT * FROM ( SELECT deptno, job, empno FROM emp ) 랑 SELECT deptno, job, empno FROM emp 의 차이는 이 구문에서 있어?
+
+✨
+SELECT deptno, job, empno FROM emp	❌ 안 됨	PIVOT은 FROM 절에서 바로 사용해야 하는데, 여기선 직접 PIVOT을 붙일 수 없음
+SELECT * FROM (SELECT deptno, job, empno FROM emp)	✅ 됨	이 형태는 FROM (subquery) 안에서 데이터를 먼저 만들어서, 그 위에 PIVOT을 적용 가능
+
+Oracle에서 PIVOT 문법의 위치는 FROM 절 안입니다.
