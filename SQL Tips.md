@@ -17,10 +17,7 @@ SET LINESIZE 250
 
 SET PAGESIZE 50
 
-
-
-
-# 3. >현재 스키마 확인
+# 4. 현재 스키마 확인
 
 SELECT username FROM all_users ORDER BY username;
 
