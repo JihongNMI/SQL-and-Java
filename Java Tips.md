@@ -5,7 +5,7 @@
 
 emmet처럼 빨리 치기 : syso Ctrl + space = System.out.println()
 
-응용 : 클래스. Ctrl+space = 각종 기능
+>응용 : 클래스. Ctrl+space = 각종 기능
 
 줄 빨리 넘기기 : Ctrl + Enter Enter, Shift + Enter
 
