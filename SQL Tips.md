@@ -7,14 +7,14 @@ SELECT table_name FROM tabs;
 SELECT USER FROM dual;
 >다른 사용자가 접속해 있더라도 그 사람의 USER는 보이지 않습니다
 
-SELECT username, status, osuser, machine, program
-FROM v$session
-WHERE username IS NOT NULL;
+SELECT username, status, osuser, machine, program FROM v$session WHERE username IS NOT NULL;
 >현재 사용자 전체 확인(권한)
 
 # 3. 조절
 COLUMN ENAME FORMAT A11
+
 SET LINESIZE 250
+
 SET PAGESIZE 50
 
 
