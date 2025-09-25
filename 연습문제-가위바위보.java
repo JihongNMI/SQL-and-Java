@@ -23,6 +23,17 @@
 보3-가위1 = 2
 
 */		
+
+package practice2;
+
+import java.util.Scanner;
+
+public class Q2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
 		int player_win = 0, player_lose = 0;
 		String[] gbb = {"가위", "바위", "보"};
 
