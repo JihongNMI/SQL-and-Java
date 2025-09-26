@@ -4,6 +4,22 @@
 
 # 2. SQL 테이블 연결 첫 부분
 ```
+public class Emp {
+	
+	private int empno;
+	
+	private ...
+
+	//===================================================================
+	
+	public int getEmpno() {
+		return empno;
+	}
+
+	public void setEmpno(int empno) {
+		if(empno<0||empno>9999){ this.empno=0; return; }
+		this.empno = empno;
+	}
 ...get set코드...
 ```
 🤷‍♀️여기까지 했는데, 이 테이블은 null값이 있는것에 대해서 어떻게 해줘야 하지?
