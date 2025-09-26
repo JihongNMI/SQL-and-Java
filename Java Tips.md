@@ -76,3 +76,5 @@ public class Npc {
 ```
 Npc npc3 = new Npc("대장장이",90,"하하하 이녀석 하하하");
 ```
+
+# 5-2. Source-Generate Constructor..로 자동생성 가능
