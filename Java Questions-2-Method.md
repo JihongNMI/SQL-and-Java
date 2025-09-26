@@ -115,3 +115,21 @@ new Ex01_MethodType(): 객체를 생성하기 위해 **생성자(constructor)**�
 >프로그램 시작점 (main 메서드)
 >
 >공통적으로 쓰이는 상수, 유틸 메서드
+
+# 4. public static
+
+🤷‍♀️public static는 static이랑 무슨 차이지?
+
+✨예를 들어:
+
+public static void main(String[] args)
+
+public → JVM이 어디서든 이 메서드를 실행할 수 있도록 접근 허용
+
+static → JVM이 객체를 생성하지 않고도 바로 호출할 수 있도록 지정
+
+즉, main 메서드에 public static이 꼭 필요한 이유는:
+
+JVM이 프로그램 시작 시, 클래스의 인스턴스를 생성하지 않고
+
+외부에서 main() 메서드를 직접 호출해야 하기 때문이에요.
