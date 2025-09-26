@@ -69,3 +69,119 @@ NUMBER(7,2)  라는게 마음에 걸리는데, 그럼 7000000도 되는 값인�
 BigDecimal은 객체, 정밀 수학 계산, 클래스 내부 메서드 사용, 성능 고려 등 심화 개념이 들어가기 때문에 중급~실무 레벨에서 주로 다뤄요.
 
 # 2-2. 실제로 BigDecimal로 고치는 작업을 해봤는데 시간이 많이 걸렸다
+
+```
+
+package chapter9;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
+
+public class Emp {
+	
+	private int empno;
+	
+	private String ename;
+	
+	private String job;
+
+	private Integer mgr;
+	
+	private LocalDate hireDate;
+	
+	private BigDecimal sal;
+	
+	private BigDecimal comm;
+	
+	private int deptno;
+
+	//===================================================================
+	
+	public int getEmpno() {
+		return empno;
+	}
+
+	public void setEmpno(int empno) {
+		if(empno<0||empno>9999){ this.empno=0; return; }
+		this.empno = empno;
+	}
+
+	public String getEname() {
+		return ename;
+	}
+
+	public void setEname(String ename) {
+		if(ename.length()>10) { System.out.println("11글자 미만 입력"); this.ename=""; }
+		this.ename = ename;
+	}
+
+	public String getJob() {
+		return job;
+	}
+
+	public void setJob(String job) {
+		if(job.length()>9) { System.out.println("10글자 미만 입력"); this.job=""; }
+		this.job = job;
+	}
+
+	public Integer getMgr() {
+		return mgr;
+	}
+//매니저 없을 수도 있는
+	public void setMgr(Integer mgr) {
+		if(mgr == null || mgr<0 || mgr>9999)
+		{
+			this.mgr=null; return;
+		}
+		this.mgr = mgr;
+	}
+
+	public LocalDate getHireDate() {
+		return hireDate;
+	}
+
+	public void setHireDate(LocalDate hireDate) {
+		this.hireDate = hireDate;
+	}
+
+	public BigDecimal getSal() {
+		return sal;
+	}
+// 5.2자리
+	public void setSal(BigDecimal sal) {
+		if(sal.compareTo(BigDecimal.ZERO) < 0 ||
+			sal.compareTo(new BigDecimal("9999.99")) > 0)
+		{
+			this.sal=BigDecimal.ZERO; return;
+		}
+		
+		this.sal = sal;
+	}
+
+	public BigDecimal getComm() {
+		return comm;
+	}
+	
+//커미션 없을 수도 있는 5.2자리
+	public void setComm(BigDecimal comm) {
+		if(comm==null ||
+		comm.compareTo(BigDecimal.ZERO) < 0 ||
+		comm.compareTo(new BigDecimal("9999.99")) > 0)
+		{ 
+			this.comm=BigDecimal.ZERO; return;
+		}
+		
+		this.comm = comm;
+	}
+
+	public int getDeptno() {
+		return deptno;
+	}
+
+	public void setDeptno(int deptno) {
+		if(deptno<0||deptno>99){ this.deptno=0; return; }
+		this.deptno = deptno;
+	}
+	
+}
+```
