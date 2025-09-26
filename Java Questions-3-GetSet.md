@@ -194,3 +194,18 @@ sal과 comm에 기본값 넣는 생성자 추가하면 객체 생성 후 바로 
 
 출력용 toString() 메서드 만들어 두면 디버깅할 때 좋습니다
 ```
+
+마지막 마무리
+```
+실제로 데이터를 넣을때는
+Emp emp = new Emp();
+	        emp.setEmpno(1234);
+	        emp.setEname("홍길동");
+	        emp.setJob("개발자");
+
+....
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
+를 넣어줘야 동작함
+```
