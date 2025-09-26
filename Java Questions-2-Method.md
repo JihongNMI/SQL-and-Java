@@ -133,3 +133,45 @@ static → JVM이 객체를 생성하지 않고도 바로 호출할 수 있도�
 JVM이 프로그램 시작 시, 클래스의 인스턴스를 생성하지 않고
 
 외부에서 main() 메서드를 직접 호출해야 하기 때문이에요.
+
+# 5. 내친김에 Scanner에 대해서
+
+Scanner sc = new Scanner(System.in);라고 주로 쓰잖아. System.in은 왜 굳이 들어있지?
+
+System.in은 **"키보드 입력을 의미하는 입력 스트림(InputStream)"**입니다.
+
+Scanner는 어떤 입력 소스든 받아서 처리할 수 있는데,
+
+우리가 자주 쓰는 **"키보드 입력"**을 사용하려면 System.in을 넘겨줘야 합니다.
+
+✅ 그럼 System.in은 정확히 뭐냐?
+
+요소	의미
+
+System	Java가 제공하는 유틸리티 클래스 (표준 입출력 등 담당)
+
+in	System 클래스 안에 있는 표준 입력 스트림 (InputStream)
+
+즉, System.in	키보드 입력을 의미하는 InputStream 객체입니다
+
+# 5-1. 스캐너 추가
+
+```
+Scanner sc = new Scanner("apple banana carrot"); 
+while (sc.hasNext()) { System.out.println(sc.next()); } 이건 출력결과가?
+```
+
+기본적으로 Scanner는 **공백(스페이스, 탭, 줄바꿈 등)**을 기준으로 입력을 토큰 단위로 분리합니다.
+
+sc.hasNext() → 다음 토큰이 있는 동안 반복
+
+sc.next() → 다음 토큰을 읽어옴
+
+apple
+
+banana
+
+carrot
+
+hasNext()	더 읽을 단어(토큰)가 있으면 true
+next()	공백 기준으로 단어 하나 읽음
