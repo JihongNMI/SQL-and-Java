@@ -111,5 +111,7 @@ new Ex01_MethodType(): 객체를 생성하기 위해 **생성자(constructor)**�
 
 **OOP 철학에서는 static은 도우미 클래스(utility class)**로 한정하는 게 좋다고 봅니다
 >객체와는 무관한 도구적인 기능 (예: Math.max(), System.out.println())
+>
 >프로그램 시작점 (main 메서드)
+>
 >공통적으로 쓰이는 상수, 유틸 메서드
