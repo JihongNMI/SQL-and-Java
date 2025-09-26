@@ -31,6 +31,15 @@ SELECT table_name FROM all_tables WHERE owner = 'SCOTT';
 
 객체 : SELECT object_name FROM user_objects WHERE object_type = 'TABLE';
 
+# 5. 컬럼 데이터 타입 확인 : DESC EMP;
+
+NUMBER(4)	최대 4자리 정수	1234, 42 등
+
+VARCHAR2(n)	최대 n자 가변 길이 문자열	"Hello", "Java" 등
+>VARCHAR: 표준 SQL 문자열 타입 (길이 가변), VARCHAR2: Oracle 전용, 거의 같은 기능이지만 Oracle에서는 VARCHAR 타입은 예약어로만 남겨두고, 실제로는 VARCHAR2를 사용해요. 다른 DBMS에서는 그냥 VARCHAR를 씁니다.
+
+NUMBER(7,2)	총 7자리 숫자 중 소수점 아래 2자리 포함
+
 # 0. 기타 팁
 echo %path%
 
