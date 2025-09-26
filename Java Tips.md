@@ -22,3 +22,5 @@ Scanner sc = new Scanner(System.in);
 
 # 5. Java랑 C++이 대표적인 오버로딩을 지원하는 언어(객체지향언어)
 System.out.println만 해도 오버로딩으로 만든 대표적인 예시
+
+C에는 없고 파이썬도 없는 거나 다름없
