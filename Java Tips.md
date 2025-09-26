@@ -32,6 +32,41 @@ C에는 없고 파이썬도 없는 거나 다름없
 
 그리고 오버로딩이 가능
 ```
+package chapter9;
+
+public class Npc {
+	String name;
+	int hp;
+	String appeal;
+	
+	Npc(){
+		
+	}
+	
+	Npc(String name, int hp, String appeal){
+		this.name = name;
+		this.hp=hp;
+		this.appeal=appeal;
+	}
+	
+	
+	
+	//자기소개
+	void say() {
+		System.out.println("안녕 나는 "+name+"입니다");
+		System.out.println(appeal);
+	}
+	
+	//데이터 변경
+	void setHp(int hpData) {
+		hp = hpData;
+	}
+	
+}
+```
+
+
+```
 			Npc npc2 = new Npc();
 			
 			npc2.name = "요리사";
