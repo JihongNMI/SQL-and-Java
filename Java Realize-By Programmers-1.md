@@ -20,3 +20,15 @@ return (조건) ? 1 : -1;	✅ 가능
 그건 나중에 배울듯
 
 스트림을 응용하는 것도 나중에 배울 듯
+
+# 5. 코테에서 배열 말인데
+
+처음에 int[] answer = {};라고 되어있는거 그대로 쓰면
+
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0
+
+에러가 남
+
+int[] answer = new int[2];
+
+로 하거나 해야 함
