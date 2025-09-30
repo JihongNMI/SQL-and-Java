@@ -1,11 +1,11 @@
 🤷‍♀️다시 한번 물어볼게
-
+```
 -- 코드를 입력하세요
 SELECT b.title, b.board_id, r.reply_id, r.writer_id, r.contents, r.created_date
 FROM used_goods_board b JOIN used_goods_reply r ON (b.board_id = r.board_id)
 -- WHERE b.created_date = '2022-10-99'
 ORDER BY r.created_date, b.title;
-
+```
 이 코드에서, select b.board_id라고 쓰는 것과 r.board_id라고 쓰는 것의 차이가 있어?
 
 그래 조인조건으로 동일한 board_id여야만 출력한다면, 결국 뭘로 써도 같은 거 아냐?
