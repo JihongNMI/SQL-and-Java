@@ -181,7 +181,7 @@ order by r.created_date, b.title;
 ## TO_char(r.created_date, 'YYYY-MM-DD') VS DATE_FORMAT(r.created_date, '%Y-%m-%d') 인 셈
 
 
-# 2. inner join을 쓰자
+# 2. 똑같음을 원한다면 inner join(join ... on (...)을 쓰자
 🤷‍♀️
 ```
 -- 코드를 입력하세요
