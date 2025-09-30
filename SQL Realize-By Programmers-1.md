@@ -1,3 +1,5 @@
+# 1. 생각 이상으로 고전한 이유 : 날짜 처리 방법 때문
+
 🤷‍♀️다시 한번 물어볼게
 ```
 -- 코드를 입력하세요
@@ -141,7 +143,7 @@ TO_CHAR (Oracle), DATE_FORMAT (MySQL), TO_CHAR (PostgreSQL) 같은 함수들이 
 CAST + SUBSTR 조합은 대부분 환경에서 동작하는 경우가 많아요.
 
 🤷‍♀️
-최종적으론 이렇게 되나
+최종적으론 이렇게 되나(mysql이였음)
 ```
 -- 코드를 입력하세요
 SELECT b.title, b.board_id, r.reply_id, r.writer_id, r.contents, SUBSTR(CAST(r.created_date AS CHAR), 1, 10)
@@ -161,3 +163,15 @@ WHERE b.created_date >= to_date('2022-10-01', 'YYYY-MM-DD') AND
     b.created_date < to_date('2022-11-01','YYYY-MM-DD')
 order by r.created_date, b.title;
 ```
+
+🤷‍♀️결국 MySQL에선 이 코드를 쓰고, 오라클에선 위에 코드를 쓰는게  좀 더 좋아 보이네
+```
+-- 코드를 입력하세요
+SELECT b.title, b.board_id, r.reply_id, r.writer_id, r.contents, DATE_FORMAT(r.created_date, '%Y-%m-%d')
+FROM used_goods_board b join used_goods_reply r on (b.board_id = r.board_id)
+WHERE b.created_date >= '2022-10-01' AND 
+    b.created_date < '2022-11-01'
+order by r.created_date, b.title;
+```
+
+# 2. 결국 여기서 얻은 교훈은 날짜는 mysql은 date_format이고 오라클은 to_date인건가...
