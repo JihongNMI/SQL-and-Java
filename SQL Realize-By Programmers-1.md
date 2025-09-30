@@ -179,7 +179,8 @@ order by r.created_date, b.title;
 
 # 1-1. 결국 여기서 얻은 교훈은 날짜는 mysql은 date_format이고 오라클은 to_date인건가...
 ## TO_char(r.created_date, 'YYYY-MM-DD') VS DATE_FORMAT(r.created_date, '%Y-%m-%d') 인 셈
-✨
+
+✨ 대소문자에 주의
 | 포맷 기호 | 의미                     | 예시                     |
 | ----- | ---------------------- | ---------------------- |
 | `%Y`  | 4자리 연도                 | `2025`                 |
