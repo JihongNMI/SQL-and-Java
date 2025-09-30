@@ -154,7 +154,8 @@ order by r.created_date, b.title;
 ```
 
 🤷‍♀️근데 이거 Oracle에서 오류가 난다?
-우여곡절 끝에 얻은 코드
+
+우여곡절 끝에 얻은 Oracle용 최종 코드
 ```
 -- 코드를 입력하세요
 SELECT b.title, b.board_id, r.reply_id, r.writer_id, r.contents, TO_char(r.created_date, 'YYYY-MM-DD')
@@ -165,6 +166,8 @@ order by r.created_date, b.title;
 ```
 
 🤷‍♀️결국 MySQL에선 이 코드를 쓰고, 오라클에선 위에 코드를 쓰는게  좀 더 좋아 보이네
+
+MySQL용 최종 코드
 ```
 -- 코드를 입력하세요
 SELECT b.title, b.board_id, r.reply_id, r.writer_id, r.contents, DATE_FORMAT(r.created_date, '%Y-%m-%d')
