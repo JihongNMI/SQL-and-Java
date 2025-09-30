@@ -86,13 +86,13 @@ WHERE b.created_date >= TO_DATE('2022-10-01', 'YYYY-MM-DD')
 
 이렇게 < 2022-11-01 (11월 1일 00:00:00 이전) 으로 하는 게 더 정확합니다.
 
-execute command denied to user 'USERD7063D384681749DDA459097F2'@'%' for routine 'sql_runner_run.to_date' 에러가 나
+🤷‍♀️execute command denied to user 'USERD7063D384681749DDA459097F2'@'%' for routine 'sql_runner_run.to_date' 에러가 나
 
-오류 메시지 보니, 이건 사용자 권한 문제라서, to_date 함수 실행 권한이 없다는 뜻이에요.
+✨오류 메시지 보니, 이건 사용자 권한 문제라서, to_date 함수 실행 권한이 없다는 뜻이에요.
 
-아... to_date는 오라클만?
+🤷‍♀️아... to_date는 오라클만?
 
-네, 맞아요! TO_DATE 함수는 Oracle의 내장 함수로, 문자열을 날짜 타입으로 변환할 때 사용합니다.
+✨네, 맞아요! TO_DATE 함수는 Oracle의 내장 함수로, 문자열을 날짜 타입으로 변환할 때 사용합니다.
 
 그럼 오라클이나 관계없이 공통적으로 쓰는 방법은 있어?
 
@@ -139,3 +139,14 @@ SUBSTR(..., 1, 10) 으로 앞 10글자만 추출 → YYYY-MM-DD 형태가 됩니
 TO_CHAR (Oracle), DATE_FORMAT (MySQL), TO_CHAR (PostgreSQL) 같은 함수들이 다 다르지만
 
 CAST + SUBSTR 조합은 대부분 환경에서 동작하는 경우가 많아요.
+
+🤷‍♀️
+최종적으론 이렇게 되나
+```
+-- 코드를 입력하세요
+SELECT b.title, b.board_id, r.reply_id, r.writer_id, r.contents, SUBSTR(CAST(r.created_date AS CHAR), 1, 10)
+FROM used_goods_board b join used_goods_reply r on (b.board_id = r.board_id)
+WHERE b.created_date >= '2022-10-01' AND 
+    b.created_date < '2022-11-01'
+order by r.created_date, b.title;
+```
