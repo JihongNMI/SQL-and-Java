@@ -150,3 +150,14 @@ WHERE b.created_date >= '2022-10-01' AND
     b.created_date < '2022-11-01'
 order by r.created_date, b.title;
 ```
+
+🤷‍♀️근데 이거 Oracle에서 오류가 난다?
+우여곡절 끝에 얻은 코드
+```
+-- 코드를 입력하세요
+SELECT b.title, b.board_id, r.reply_id, r.writer_id, r.contents, TO_char(r.created_date, 'YYYY-MM-DD')
+FROM used_goods_board b join used_goods_reply r on (b.board_id = r.board_id)
+WHERE b.created_date >= to_date('2022-10-01', 'YYYY-MM-DD') AND 
+    b.created_date < to_date('2022-11-01','YYYY-MM-DD')
+order by r.created_date, b.title;
+```
