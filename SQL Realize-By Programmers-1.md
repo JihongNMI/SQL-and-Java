@@ -177,5 +177,32 @@ WHERE b.created_date >= '2022-10-01' AND
 order by r.created_date, b.title;
 ```
 
-# 2. 결국 여기서 얻은 교훈은 날짜는 mysql은 date_format이고 오라클은 to_date인건가...
+# 1-1. 결국 여기서 얻은 교훈은 날짜는 mysql은 date_format이고 오라클은 to_date인건가...
 ## TO_char(r.created_date, 'YYYY-MM-DD') VS DATE_FORMAT(r.created_date, '%Y-%m-%d') 인 셈
+
+
+# 2. inner join을 쓰자
+🤷‍♀️
+```
+-- 코드를 입력하세요
+SELECT fh.flavor
+FROM FIRST_HALF fh LEFT JOIN ICECREAM_INFO ii ON (fh.flavor = ii.flavor)
+WHERE fh.TOTAL_ORDER > 3000 AND ii.INGREDIENT_TYPE = 'fruit_based'
+ORDER BY fh.TOTAL_ORDER desc;
+```
+inner join을 추천하던데, 원래 이런 경우 뭘 하고 싶을 때 left join인거지?
+
+✨이런 경우에 **LEFT JOIN**을 사용하고 싶을 때는, 오른쪽 테이블의 정보가 없더라도 왼쪽 테이블의 데이터는 무조건 보고 싶을 때입니다.
+
+1. '녹차' 맛이 ICECREAM_INFO 테이블에 아직 추가되지 않은 (즉, 성분 정보가 없는 NULL) 상태라고 가정해 봅시다.
+
+2. 'ICECREAM_INFO'에 아직 등록되지 않은 모든 아이스크림 맛을 찾고 싶을 때
+
+3.  원래 쿼리처럼 특정 값(fruit_based)으로 필터링하여 양쪽 테이블의 일치를 강제할 때는 INNER JOIN이 더 자연스럽습니다.
+
+```
+SELECT fh.flavor
+FROM FIRST_HALF fh JOIN ICECREAM_INFO ii ON (fh.flavor = ii.flavor)
+WHERE fh.TOTAL_ORDER > 3000 AND ii.INGREDIENT_TYPE = 'fruit_based'
+ORDER BY fh.TOTAL_ORDER DESC;
+```
