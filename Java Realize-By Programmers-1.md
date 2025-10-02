@@ -32,3 +32,14 @@ Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 0 out
 int[] answer = new int[2];
 
 로 하거나 해야 함
+
+
+# 6. 코테에서 while 말인데
+
+do 안에서 임시로 쓰려고 만든 변수는
+```
+do{
+  int a = 1;
+}while(a != 1);
+```
+while에서 못써서 밖으로 빼야 함
