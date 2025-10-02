@@ -14,7 +14,7 @@ emmet처럼 빨리 치기 : syso Ctrl + space = System.out.println()
 
 실행 : Ctrl + F11
 
-자동 임포트 단축키 : Ctrl + Shift + o
+✨자동 임포트 단축키 : Ctrl + Shift + o
 
 student.age에서 Ctrl누른 채로 커서를 갖다 대고 클릭하면 원래 그게 나온다 : Open Declaration
 
