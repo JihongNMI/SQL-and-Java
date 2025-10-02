@@ -99,3 +99,11 @@ F7 스텝리턴 : 안으로 갔지만 다됐다 싶을때
 # 7. 체킹하는 변수는 boolean이 더 편할 수도 있다
 
 check = check+1; 하면 계속 늘어날 때 불편할 수도 있는 경우가 잇고
+
+# 8. java를 cmd로 실행하는데 버젼이 안맞는 경우  java.lang.UnsupportedClassVersionError:
+
+원 파일 패키지에서 오른쪽 버튼 Properties
+
+>Project Facets
+
+>>버튼 하나 누르고 Java 버젼을 11로 변경
