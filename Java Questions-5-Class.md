@@ -13,7 +13,22 @@ new는 "새로운 객체 생성"을 뜻하고 System.in은 '키보드 입력 스
 그래서 new Scanner(System.in) 은 "키보드 입력을 처리하는 Scanner 객체"를 만드는 것.
 
 ## 렉트를 만든다 치자 
+```
+class Rect {
+	private int width, height;
+	public Rect(int width, int height) {
+		this.width = width;
+		this.height = height;
+	}
+	public int getArea() { return width*height; }
+}
 
+```
+1. public 안 붙이고 그냥 class Rect{}다. public은 메인에 하나만.
+2. 다음에 인수라고 하나? [필드를 정의한다고 적혀있네] 를 적어넣는다.
+3. 그리고 생성자를 만드는데... public을...
+>보통 클래스가 외부에서 객체를 자유롭게 생성할 수 있도록 할 때 public을 씁니다.
+그렇네 퍼블릭 그리고 클래스 같은 이름, 괄호 매개변수들
 
 
 ## 배열 안에 객체를 넣는것이 있는데
