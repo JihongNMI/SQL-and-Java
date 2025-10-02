@@ -107,3 +107,5 @@ check = check+1; 하면 계속 늘어날 때 불편할 수도 있는 경우가 �
 >Project Facets
 
 >>버튼 하나 누르고 Java 버젼을 11로 변경
+
+>>>C:\Users\it\Desktop\Java\workspace\HelloWorld\bin>     java chapter15.Ex07_mainParameter a b c d
