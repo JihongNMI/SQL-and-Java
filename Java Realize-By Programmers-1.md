@@ -15,8 +15,10 @@ int answer = (조건) ? 1 : -1; ✅ 가능	가장 일반적인 사용 방식
 return (조건) ? 1 : -1;	✅ 가능
 
 # 4. 배열 길이 = for(int k=0; k<배열.length; k++)
-근데 for-each라는게 있어서 그거랑 같다고 함 for (int k : numbers) {
-
+근데 for-each라는게 있어서 그거랑 같다고 함
+```
+for (int k : numbers) {
+```
 그건 나중에 배울듯
 
 스트림을 응용하는 것도 나중에 배울 듯
