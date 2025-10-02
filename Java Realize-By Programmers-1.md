@@ -28,11 +28,14 @@ return (조건) ? 1 : -1;	✅ 가능
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0
 
 에러가 남
-
+```
 int[] answer = new int[2];
-
-로 하거나 해야 함
-
+```
+로 하거나 
+```
+int[] answer;
+answer = new int[2];
+```
 
 # 6. 코테에서 while 말인데
 
