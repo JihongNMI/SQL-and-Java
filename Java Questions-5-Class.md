@@ -11,3 +11,9 @@ Scanner sc = new Scanner(System.in);
 new는 "새로운 객체 생성"을 뜻하고 System.in은 '키보드 입력 스트림' (키보드로부터 입력받는 통로) 입니다.
 
 그래서 new Scanner(System.in) 은 "키보드 입력을 처리하는 Scanner 객체"를 만드는 것.
+
+## 렉트를 만든다 치자 
+
+
+
+## 배열 안에 객체를 넣는것이 있는데
