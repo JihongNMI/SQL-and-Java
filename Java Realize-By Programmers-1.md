@@ -23,7 +23,7 @@ return (조건) ? 1 : -1;	✅ 가능
 
 # 5. 코테에서 배열 말인데
 
-처음에 int[] answer = {};라고 되어있는거 그대로 쓰면
+처음에 int[] answer = {};라고 되어있는거 그대로 쓰면(빈 배열을 그대로 만들어 둘려면)
 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0
 
