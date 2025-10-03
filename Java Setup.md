@@ -33,4 +33,10 @@ project 하고... jre는 버전에 맞춰주고(SE 11)
 
 src 폴더 안에서 package 만들고 class 만들고... 그러면 될 듯
 
+# 8. 그리고
+
+Eclipse에서 코딩할 때 글자 크기 바꾸려면
+
+Window > Preferences > General > Appearance > Colors and Fonts > Basic > Text Font 에서 조절 가능해.
+
 # 8. 참 처음 이게 기억이 안나는 경우가 많아
