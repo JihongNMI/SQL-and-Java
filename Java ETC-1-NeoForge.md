@@ -32,9 +32,18 @@ Install server	🖥️ 서버용: 다른 사람과 멀티플레이 서버를 만
 
 3. ✅ 폴더 : D:\Dev\MinecraftMod\MDK-1.21.9-ModDevGradle-main 로 함
 
-✅ Eclipse에서 MDK 프로젝트 열기 (ModDevGradle 기준)
+## 3) gradlew genEclipseRuns
 
-Eclipse 실행
+이걸 진행을 안하고 했는데
+> To use the NeoForge plugin, please run Gradle with Java 17 or newer. You are currently running on Java 11 (11).
+
+가 떠서... 
+1. SE 21을 설치하고
+2. 환경변수 지정(JAVA_HOME 만 변경)
+   
+하고 다시 하니 잘 됨
+
+# 2. Eclipse에서 MDK 프로젝트 열기 (ModDevGradle 기준)
 
 메뉴에서 File → Import... 선택
 
@@ -47,5 +56,4 @@ Finish 클릭하면 Gradle 프로젝트로 불러와짐
 빌드가 자동으로 시작되고 필요한 라이브러리들이 다운로드됨
 
 4. runClient 가 없어서 막힘
-5. cmd에서 gradlew runClient 실행하니 java 버전이 딸린다고...
-6. 그래서 JAVA SE 21을 설치하기로
+
