@@ -43,6 +43,9 @@ Install server	🖥️ 서버용: 다른 사람과 멀티플레이 서버를 만
    
 하고 다시 하니 잘 됨
 
+> 이게 안되는데요 갑자기
+가장 중요한 점: runClient가 작동하므로, 프로젝트 자체는 이미 정상입니다. 대부분의 경우 방법 1처럼 Eclipse의 내장 Gradle Import 기능을 사용하는 것이 최신 MDK 환경에서는 가장 빠르고 정확한 해결책입니다.
+
 # 2. Eclipse에서 MDK 프로젝트 열기 (ModDevGradle 기준)
 
 메뉴에서 File → Import... 선택
