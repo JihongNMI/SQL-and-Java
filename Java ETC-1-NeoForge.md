@@ -30,3 +30,19 @@ Install server	🖥️ 서버용: 다른 사람과 멀티플레이 서버를 만
 
 “Download ZIP” 을 선택
 
+✅ 폴더 : D:\Dev\MinecraftMod\MDK-1.21.9-ModDevGradle-main 로 함
+
+✅ Eclipse에서 MDK 프로젝트 열기 (ModDevGradle 기준)
+
+Eclipse 실행
+
+메뉴에서 File → Import... 선택
+
+Gradle → Existing Gradle Project 선택 후 Next
+
+Project root directory에서 압축 푼 MDK 폴더 경로 지정 (예: D:\MinecraftMod\MDK-1.21.9-ModDevGradle-main)
+
+Finish 클릭하면 Gradle 프로젝트로 불러와짐
+
+빌드가 자동으로 시작되고 필요한 라이브러리들이 다운로드됨
+
