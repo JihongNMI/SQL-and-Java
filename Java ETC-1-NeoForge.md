@@ -71,3 +71,7 @@ Finish 클릭하면 Gradle 프로젝트로 불러와짐
 1. 나는 지금 원래 있던 자바&이클립스 위에 NeoForged랑 MDK를 설치했다. 
 2. 이클립스를 실행해서, 임포트를 하고 안에 ExampleMod.java를 확인했으니, 이것이 궁금해서 Gradle Tasks, mod development 안의 runClient를 실행했더니, 마인크래프트 프로그램이 실행되었다.
 3. 자. 이제 난 뭘 해야 이 예제파일이 의미하는 걸 알 수 있지? 월드를 만들어야 하나?
+
+
+
+이 월드의 생성이 헷깔린다. 1. Singleplayer인가 Create Test World인가? 2. 게임 모드는 Creative로 해야만 하는가?
