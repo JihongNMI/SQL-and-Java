@@ -14,7 +14,7 @@ Install server	🖥️ 서버용: 다른 사람과 멀티플레이 서버를 만
 
 ## 2) github애서 MDK를
 
-✅ 어떤 걸 선택하는 게 좋을까?
+1. ✅ 어떤 걸 선택하는 게 좋을까?
 
 프로젝트 규모 / 필요성	추천 플러그인
 
@@ -24,13 +24,13 @@ Install server	🖥️ 서버용: 다른 사람과 멀티플레이 서버를 만
 
 그래서 ModDev로
 
-✅ 어떻게 받지? 
+2. ✅ 어떻게 받지? 
 
 리포지토리 메인 페이지에서 “Code” 버튼 클릭
 
 “Download ZIP” 을 선택
 
-✅ 폴더 : D:\Dev\MinecraftMod\MDK-1.21.9-ModDevGradle-main 로 함
+3. ✅ 폴더 : D:\Dev\MinecraftMod\MDK-1.21.9-ModDevGradle-main 로 함
 
 ✅ Eclipse에서 MDK 프로젝트 열기 (ModDevGradle 기준)
 
@@ -46,3 +46,6 @@ Finish 클릭하면 Gradle 프로젝트로 불러와짐
 
 빌드가 자동으로 시작되고 필요한 라이브러리들이 다운로드됨
 
+4. runClient 가 없어서 막힘
+5. cmd에서 gradlew runClient 실행하니 java 버전이 딸린다고...
+6. 그래서 JAVA SE 21을 설치하기로
