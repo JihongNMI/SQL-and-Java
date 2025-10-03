@@ -1,6 +1,6 @@
-# 1. 네오포지를 깔아본다
+# 1. 네오포지'드'를 깔아본다
 
-## 1) 처음 까는데
+## 1) 처음 까는데...
 
 Install client	💻 클라이언트용: 네가 만든 모드를 직접 게임에서 테스트하거나 플레이할 때 사용
 
@@ -12,7 +12,7 @@ Install server	🖥️ 서버용: 다른 사람과 멀티플레이 서버를 만
 
 서버는 나중에 네 모드를 멀티에 올릴 때 설치하면 돼
 
-## 2) github애서 MDK를
+## 2) github애서 MDK를 다운
 
 1. ✅ 어떤 걸 선택하는 게 좋을까?
 
@@ -22,7 +22,7 @@ Install server	🖥️ 서버용: 다른 사람과 멀티플레이 서버를 만
 
 여러 버전 타겟 또는 복잡한 구조 필요	NeoGradle
 
-그래서 ModDev로
+>그래서 ModDev로
 
 2. ✅ 어떻게 받지? 
 
@@ -32,7 +32,7 @@ Install server	🖥️ 서버용: 다른 사람과 멀티플레이 서버를 만
 
 3. ✅ 폴더 : D:\Dev\MinecraftMod\MDK-1.21.9-ModDevGradle-main 로 함
 
-## 3) gradlew genEclipseRuns
+## 3) gradlew genEclipseRuns... [는 결국 잘 안되네; 요즘 버전은 무시해도 될듯]
 
 이걸 진행을 안하고 했는데
 > To use the NeoForge plugin, please run Gradle with Java 17 or newer. You are currently running on Java 11 (11).
@@ -45,9 +45,11 @@ Install server	🖥️ 서버용: 다른 사람과 멀티플레이 서버를 만
 
 > 이게 안되는데요 갑자기
 
-가장 중요한 점: runClient가 작동하므로, 프로젝트 자체는 이미 정상입니다. 대부분의 경우 방법 1처럼 Eclipse의 내장 Gradle Import 기능을 사용하는 것이 최신 MDK 환경에서는 가장 빠르고 정확한 해결책입니다.
+가장 중요한 점: runClient가 작동하므로, 프로젝트 자체는 이미 정상입니다. 
 
-# 2. Eclipse에서 MDK 프로젝트 열기 (ModDevGradle 기준)
+대부분의 경우 방법 1처럼 Eclipse의 내장 Gradle Import 기능을 사용하는 것이 최신 MDK 환경에서는 가장 빠르고 정확한 해결책입니다.
+
+# 2. Eclipse에서 MDK 프로젝트 열기 (ModDevGradle 기준) : MDK를 임포트
 
 메뉴에서 File → Import... 선택
 
@@ -59,21 +61,22 @@ Finish 클릭하면 Gradle 프로젝트로 불러와짐
 
 빌드가 자동으로 시작되고 필요한 라이브러리들이 다운로드됨
 
-4. runClient 가 없어서 막힘
+# 3. AI가 말하는 runClient 가 어디에도 없어서 없어서 막힘
 
+이 점은 결국 최신 버전? 이 mod development 안에 있는 runClient를 하면 되는 것으로...(맞겠지?)
 
-## 현재 1.21.9이다
+현재 마크는 1.21.9이다
 
+# 4. 너무 막혀서 일단 재정리를....
 
-# 3. 너무 막혀서 일단 재정리를....
-
+>
 지금 너 말이 꼬여있는 것 같다. 내가 명확하게 이야기해줄테니 다시 해보자
 1. 나는 지금 원래 있던 자바&이클립스 위에 NeoForged랑 MDK를 설치했다. 
 2. 이클립스를 실행해서, 임포트를 하고 안에 ExampleMod.java를 확인했으니, 이것이 궁금해서 Gradle Tasks, mod development 안의 runClient를 실행했더니, 마인크래프트 프로그램이 실행되었다.
 3. 자. 이제 난 뭘 해야 이 예제파일이 의미하는 걸 알 수 있지? 월드를 만들어야 하나?
 
 
-# 4. 또 막히고
+# 5. 또 막히고
 
 # 5. 또또 막혔는데 슬슬 알것 같은 느낌
 이 월드의 생성이 헷깔린다. 1. Singleplayer인가 Create Test World인가? 2. 게임 모드는 Creative로 해야만 하는가?
