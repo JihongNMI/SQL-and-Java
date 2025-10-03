@@ -24,3 +24,13 @@ bin : binary file(기계어 파일, 컴파일된 파일)
 # 6. 이클립스 설치
 
 Eclipse IDE for Enterprise Java and Web Developers 로 하면 됨
+
+압축은 적절한 폴더에 풀고 실행
+
+# 7. 이클립스 안에서
+
+project 하고... jre는 버전에 맞춰주고(SE 11)
+
+src 폴더 안에서 package 만들고 class 만들고... 그러면 될 듯
+
+# 8. 참 처음 이게 기억이 안나는 경우가 많아
