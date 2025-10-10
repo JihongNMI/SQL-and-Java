@@ -122,3 +122,15 @@ graph TD
     B --> D[50];
     B --> E[70];
 ```
+
+
+```mermaid
+graph TD
+    A --> B_Left
+    A --> B_Right
+    B_Left --> C_Left
+    B_Left --> C_Right
+    B_Right --> D_Left["왼쪽 자식만 있음"]
+    %% B_Right 오른쪽 자식이 없음
+    %% 이게 완전 이진 트리가 아님
+```
