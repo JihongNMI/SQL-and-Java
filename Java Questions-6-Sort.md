@@ -6,7 +6,7 @@
 
 2. admonition
 
-::: warning
+::: warning : ㅇㅇㅇㅇ
  이 작업
 :::
 
