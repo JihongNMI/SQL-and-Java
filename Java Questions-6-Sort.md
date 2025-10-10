@@ -9,6 +9,8 @@
 ::: warning, ::: tip, ::: info : github에서 지원안함
 :::
 
+3. latex
+
 인라인 수식: $E = mc^2$
 
 블록 수식:
