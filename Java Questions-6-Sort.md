@@ -134,3 +134,12 @@ graph TD
     %% B_Right 오른쪽 자식이 없음
     %% 이게 완전 이진 트리가 아님
 ```
+이라고 하는데 둘 다 완전이진트리가 아니라고 했다가 정정당했음
+
+```mermaid
+graph TD
+    A --> B_Left
+    A --> B_Right
+    B_Left --> C_Right["오른쪽 자식만 있음"]
+    %% C_Left 없음, C_Right만 있음 → 완전 이진 트리 아님
+```
