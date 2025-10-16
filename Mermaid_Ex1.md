@@ -87,9 +87,9 @@ mindmap
     subtopic2
 ```
 
-8개나 있었나
 
 
+# ✅ 9. Timeline (타임라인)
 ```mermaid
 timeline
     title 프로젝트 주요 일정
