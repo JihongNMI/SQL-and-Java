@@ -1,3 +1,4 @@
+# ✅ 1. Flowchart (순서도)
 ```mermaid
 flowchart TD
     A[Start] --> B{Condition}
@@ -7,6 +8,7 @@ flowchart TD
     D --> E
 ```
 
+# ✅ 2. Sequence Diagram (시퀀스 다이어그램
 ```mermaid
 sequenceDiagram
     participant Alice
@@ -15,6 +17,7 @@ sequenceDiagram
     Bob-->>Alice: I am good, thanks!
 ```
 
+# ✅ 3. Gantt Chart (간트 차트)
 ```mermaid
 gantt
     title Project Timeline
@@ -27,6 +30,7 @@ gantt
     Testing :2025-10-20, 5d
 ```
 
+# ✅ 4. Class Diagram (클래스 다이어그램)
 ```mermaid
 classDiagram
     class Animal {
@@ -39,6 +43,7 @@ classDiagram
     Animal <|-- Dog
 ```
 
+# ✅ 5. State Diagram (상태도)
 ```mermaid
 stateDiagram-v2
     [*] --> Idle
@@ -48,6 +53,7 @@ stateDiagram-v2
     Error --> Idle : reset
 ```
 
+# ✅ 6. Entity Relationship Diagram (ERD)
 ```mermaid
 erDiagram
     USERS ||--o{ ORDERS : places
@@ -62,6 +68,7 @@ erDiagram
     }
 ```
 
+# ✅ 7. Pie Chart (파이 차트)
 ```mermaid
 pie
     title Project Status
@@ -70,6 +77,7 @@ pie
     "To Do" : 10
 ```
 
+# ✅ 8. Mindmap (마인드맵)
 ```mermaid
 mindmap
   root
