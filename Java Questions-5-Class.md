@@ -15,6 +15,10 @@ new는 "새로운 객체 생성"을 뜻하고 System.in은 '키보드 입력 스
 ## 렉트를 만든다 치자 
 ```
 class Rect { // 1. 클래스
+
+// class Rectsss extends Rect { 1-1. Rect 상속 할 때 이렇게.
+
+
 	private int width, height; // 2. 필드를 정의
 
 	public Rect(int width, int height) {   // 3. 생성자 : 자동생성 가능
