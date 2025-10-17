@@ -23,14 +23,18 @@ class Rect { // 1. 클래스
 	}
 	// 4. 겟셋 접근자 설정자 : 자동생성 가능
 
-	// 5.
+	// 5. 기능 메소드
 	
 	public int getArea() {
 		return width*height;
 	}
 
-	// 6. 오버라이드 - toString같은거나, 부모꺼 뒤집어씌울 때
+	// 6. 오버라이드 메소드 - toString같은거나, 부모꺼 뒤집어씌울 때
 	@Override
+	public String toString() {
+		return "칼로리 : " + cal +  "    코스트 : " + cost + "    키로 : " + kg;
+	}
+	
 	
 }
 
@@ -47,7 +51,7 @@ class Rect { // 1. 클래스
 
 그다음엔 디스쩜 변수 이꼴 변수
 
-4. 그리고 게터세터...애더도 하나
+4. 그리고 게터세터...애더도 하나?
 
 
 ## 배열 안에 객체를 넣는것이 있는데
