@@ -39,8 +39,11 @@ SSXFF는 초 이하 소수점초
 SELECT MCDP_CD AS "진료과코드",  COUNT(*) AS "5월예약건수"
 어쩌구저쩌구
 GROUP BY MCDP_CD
+```
 
-5. 
+5. ㅇㅇ
+
+
 
 # 1. 생각 이상으로 고전한 이유 : 날짜 처리 방법 때문
 
