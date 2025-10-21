@@ -1,6 +1,6 @@
 # 0. 제일 많이 막힌 것
 
-1. 날짜
+1. 날짜 : 시스템마다 초기설정이 다를 수 있으니 YYYY-MM-DD HH24:MI:SS를 적어주는 것이다.
 ```SQL
   JOINED >= TO_DATE('2021-01-01', 'YYYY-MM-DD') AND 
   JOINED < TO_DATE('2022-01-01', 'YYYY-MM-DD');
