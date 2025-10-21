@@ -41,7 +41,7 @@ SELECT MCDP_CD AS "진료과코드",  COUNT(*) AS "5월예약건수"
 GROUP BY MCDP_CD
 ```
 
-5. HAVING 쓰는 타이밍
+5. HAVING 쓰는 타이밍 : WHERE는 원 테이블에 쓰고, 그룹함수는 HAVING에 쓰고
 ```SQL
 기본 예시긴 한데
 SELECT DEPTNO, AVG(NVL(SAL,0))
