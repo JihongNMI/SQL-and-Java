@@ -45,7 +45,7 @@ GROUP BY MCDP_CD
 # 1. 생각 이상으로 고전한 이유 : 날짜 처리 방법 때문
 
 🤷‍♀️다시 한번 물어볼게
-```
+```SQL
 -- 코드를 입력하세요
 SELECT b.title, b.board_id, r.reply_id, r.writer_id, r.contents, r.created_date
 FROM used_goods_board b JOIN used_goods_reply r ON (b.board_id = r.board_id)
@@ -200,7 +200,7 @@ order by r.created_date, b.title;
 🤷‍♀️근데 이거 Oracle에서 오류가 난다?
 
 우여곡절 끝에 얻은 Oracle용 최종 코드
-```
+```SQL
 -- 코드를 입력하세요
 SELECT b.title, b.board_id, r.reply_id, r.writer_id, r.contents, TO_char(r.created_date, 'YYYY-MM-DD')
 FROM used_goods_board b join used_goods_reply r on (b.board_id = r.board_id)
@@ -212,7 +212,7 @@ order by r.created_date, b.title;
 🤷‍♀️결국 MySQL에선 이 코드를 쓰고, 오라클에선 위에 코드를 쓰는게  좀 더 좋아 보이네
 
 MySQL용 최종 코드
-```
+```SQL
 -- 코드를 입력하세요
 SELECT b.title, b.board_id, r.reply_id, r.writer_id, r.contents, DATE_FORMAT(r.created_date, '%Y-%m-%d')
 FROM used_goods_board b join used_goods_reply r on (b.board_id = r.board_id)
@@ -240,7 +240,7 @@ order by r.created_date, b.title;
 
 # 2. 똑같음을 원한다면 inner join(join ... on (...)을 쓰자
 🤷‍♀️
-```
+```SQL
 -- 코드를 입력하세요
 SELECT fh.flavor
 FROM FIRST_HALF fh LEFT JOIN ICECREAM_INFO ii ON (fh.flavor = ii.flavor)
@@ -257,7 +257,7 @@ inner join을 추천하던데, 원래 이런 경우 뭘 하고 싶을 때 left j
 
 3.  원래 쿼리처럼 특정 값(fruit_based)으로 필터링하여 양쪽 테이블의 일치를 강제할 때는 INNER JOIN이 더 자연스럽습니다.
 
-```
+```SQL
 SELECT fh.flavor
 FROM FIRST_HALF fh JOIN ICECREAM_INFO ii ON (fh.flavor = ii.flavor)
 WHERE fh.TOTAL_ORDER > 3000 AND ii.INGREDIENT_TYPE = 'fruit_based'
