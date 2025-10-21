@@ -1,3 +1,19 @@
+# 0. 제일 많이 막힌 것
+
+1. 날짜
+```SQL
+  JOINED >= TO_DATE('2021-01-01', 'YYYY-MM-DD') AND 
+  JOINED < TO_DATE('2022-01-01', 'YYYY-MM-DD');
+```
+
+2. 음... 또 날짜
+```SQL
+  SELECT BOOK_ID, TO_CHAR(TO_DATE(PUBLISHED_DATE, 'YYYY-MM-DD HH24:MI:SS'), 'YYYY-MM-DD') AS PUBLISHED_DATE_ONLY
+
+```
+
+3. 또 뭐있지.
+
 # 1. 생각 이상으로 고전한 이유 : 날짜 처리 방법 때문
 
 🤷‍♀️다시 한번 물어볼게
