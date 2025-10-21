@@ -41,7 +41,18 @@ SELECT MCDP_CD AS "진료과코드",  COUNT(*) AS "5월예약건수"
 GROUP BY MCDP_CD
 ```
 
-5. ㅇㅇ
+5. HAVING 쓰는 타이밍
+```SQL
+기본 예시긴 한데
+SELECT DEPTNO, AVG(NVL(SAL,0))
+FROM EMP
+GROUP BY DEPTNO
+-- WHERE AVG(NVL(SAL,0))>2000 <- 이건 에러나고
+HAVING AVG(NVL(SAL,0)) > 2000;
+
+아 그리고 -- 안에 ;도 에러나는 경우가 있더라;;
+
+```
 
 
 
