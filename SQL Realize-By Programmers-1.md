@@ -6,10 +6,17 @@
   JOINED < TO_DATE('2022-01-01', 'YYYY-MM-DD');
 ```
 
-2. 날짜 시간 다 있는걸 일자까지만 쓰고 싶다 : TO_CHAR로 해서 지정해준다
+2. 날짜 시간 다 있는걸 일자까지만 쓰고 싶다 : TO_CHAR로 해서 'YYYY-MM-DD' 지정해준다
 
 ```SQL
-  TO_CHAR(PUBLISHED_DATE, 'YYYY-MM-DD')
+흉부외과
+TO_CHAR(HIRE_YMD, 'YYYY-MM-DD')
+
+도서
+TO_CHAR(PUBLISHED_DATE, 'YYYY-MM-DD')
+
+3월에 태어난
+TO_CHAR(DATE_OF_BIRTH, 'YYYY-MM-DD')
 
 ```
 
@@ -19,6 +26,11 @@
 
   SELECT BOOK_ID, TO_CHAR(TO_DATE(PUBLISHED_DATE, 'YYYY-MM-DD HH24:MI:SS'), 'YYYY-MM-DD') AS PUBLISHED_DATE_ONLY
   -- 번거롭지만 이렇게.
+
+초기 예시
+DD-MON-RR HH.MI.SSXFF AM TZR
+21-OCT-25 03.45.12.123456 PM +09:00
+SSXFF는 초 이하 소수점초
 
 ```
 
