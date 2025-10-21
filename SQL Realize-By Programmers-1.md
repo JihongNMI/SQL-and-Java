@@ -6,20 +6,29 @@
   JOINED < TO_DATE('2022-01-01', 'YYYY-MM-DD');
 ```
 
-2. 음... 또 날짜 : 시스템마다 초기설정이 다를 수 있으니 YYYY-MM-DD HH24:MI:SS를 적어주는 것이다.
+2. 날짜 시간 다 있는걸 일자까지만 쓰고 싶다 : TO_CHAR로 해서 지정해준다
+
 ```SQL
-  SELECT BOOK_ID, TO_CHAR(TO_DATE(PUBLISHED_DATE, 'YYYY-MM-DD HH24:MI:SS'), 'YYYY-MM-DD') AS PUBLISHED_DATE_ONLY
-  -- 이건 날짜가 문자형이고 시간까지 있다면 번거롭지만 이렇게.
+  TO_CHAR(PUBLISHED_DATE, 'YYYY-MM-DD')
 
 ```
 
-3. 컬럼명 : 숫자나 한글 컬럼명은 ""써주고 , GROUP BY 는 별명이 아니고 원래명으로 해준다
+3. 날짜가 문자형이고 시간까지 있다면 : 시스템마다 초기설정이 다를 수 있으니 YYYY-MM-DD HH24:MI:SS를 적어주는 것이다.
+
+```SQL
+
+  SELECT BOOK_ID, TO_CHAR(TO_DATE(PUBLISHED_DATE, 'YYYY-MM-DD HH24:MI:SS'), 'YYYY-MM-DD') AS PUBLISHED_DATE_ONLY
+  -- 번거롭지만 이렇게.
+
+```
+
+4. 컬럼명 : 숫자나 한글 컬럼명은 ""써주고 , GROUP BY 는 별명이 아니고 원래명으로 해준다
 ```SQL
 SELECT MCDP_CD AS "진료과코드",  COUNT(*) AS "5월예약건수"
 어쩌구저쩌구
 GROUP BY MCDP_CD
 
-4. 
+5. 
 
 # 1. 생각 이상으로 고전한 이유 : 날짜 처리 방법 때문
 
