@@ -1,5 +1,7 @@
 # 0. 제일 많이 막힌 것
 
+## 1. 날짜
+
 1. 날짜 1월만 추출 : TO_DATE로 범위 지정
 ```SQL
   JOINED >= TO_DATE('2021-01-01', 'YYYY-MM-DD') AND 
@@ -34,14 +36,16 @@ SSXFF는 초 이하 소수점초
 
 ```
 
-4. 컬럼명 : 숫자나 한글 컬럼명은 ""써주고 , GROUP BY 는 별명이 아니고 원래명으로 해준다
+## 2. HAVING
+
+1. 컬럼명 : 숫자나 한글 컬럼명은 ""써주고 , GROUP BY 는 별명이 아니고 원래명으로 해준다
 ```SQL
 SELECT MCDP_CD AS "진료과코드",  COUNT(*) AS "5월예약건수"
 어쩌구저쩌구
 GROUP BY MCDP_CD
 ```
 
-5. HAVING 쓰는 타이밍 : WHERE는 원 테이블에 쓰고, 그룹함수는 HAVING에 쓰고
+2. HAVING 쓰는 타이밍 : WHERE는 원 테이블에 쓰고, 그룹함수는 HAVING에 쓰고
 ```SQL
 기본 예시긴 한데
 SELECT DEPTNO, AVG(NVL(SAL,0))
@@ -54,7 +58,14 @@ HAVING AVG(NVL(SAL,0)) > 2000;
 
 ```
 
+## 3. JOIN
 
+1. 결국 테이블이 다르면 조인을 쓴다. 약어를 쓰고 .을 붙이는 식
+```SQL
+FROM FIRST_HALF F 
+JOIN ICECREAM_INFO I ON  F.FLAVOR = I.FLAVOR
+```
+뭐 이런 식
 
 # 1. 생각 이상으로 고전한 이유 : 날짜 처리 방법 때문
 
