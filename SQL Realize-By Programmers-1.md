@@ -75,8 +75,8 @@ JOIN ICECREAM_INFO I ON  F.FLAVOR = I.FLAVOR
   
   근데 그.........뭐더라
 
-  WHERE OPTION = '%옵션%' 하면 진짜 이 문자열로 찾기 때문에
-  WHERE OPTION LIKE '%옵션' 을 해야한다
+  WHERE OPTION = '%옵션%' 하면 진짜 이 문자열(퍼센트 그대로) 로 찾기 때문에
+  WHERE OPTION LIKE '%옵션%' 을 해야한다
 
 는 사실
 ```
