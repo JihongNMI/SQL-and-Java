@@ -138,11 +138,13 @@ FROM CAR_RENTAL_COMPANY_RENTAL_HISTORY
 GROUP BY CAR_ID
 ORDER BY CAR_ID DESC;
 
-ELSE를 생략해서, 조건에 안 맞으면 NULL 반환하게 해야 함!
+생각 1. CASE는 조건에 안 맞으면 NULL 반환한다. 그래서 ELSE를 생략
 
-COUNT는 NULL은 세지 않으니까
-조건에 맞는 행만 센다!
+생각 2. 그리고, COUNT는 NULL은 세지 않으니까 조건에 맞는 행만 센다!
 
+생각 3. COUNT > 0 인 이유는 빌린 게 여러번 걸쳐있을 수 있어서, 2 이상도 나올 수 있다는 점
+
+생각 4. 뭐 이건 일자에 걸치는 스킬로 생각하면 될듯
 ```
 
 
