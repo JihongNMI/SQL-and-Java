@@ -78,9 +78,14 @@ JOIN ICECREAM_INFO I ON  F.FLAVOR = I.FLAVOR
   WHERE OPTION = '%옵션%' 하면 진짜 이 문자열(퍼센트 그대로) 로 찾기 때문에
   WHERE OPTION LIKE '%옵션%' 을 해야한다
 
-는 사실
+라는 사실이다.
 ```
+```SQL
 
+  LIKE랑 REGEXP_LIKE가 있는데
+    LIKE가 빠르고 가볍습니다
+    REGEXP_LIKE가 유연하지만 느립니다
+```
 
 # 1. 생각 이상으로 고전한 이유 : 날짜 처리 방법 때문
 
