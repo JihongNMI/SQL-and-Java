@@ -72,6 +72,13 @@ JOIN ICECREAM_INFO I ON  F.FLAVOR = I.FLAVOR
 1. 특정 문자를 찾고 싶다 : 정규식
 ```SQL
   %어쩌구% 하면 우리가 아는 *임
+  
+  근데 그.........뭐더라
+
+  WHERE OPTION = '%옵션%' 하면 진짜 이 문자열로 찾기 때문에
+  WHERE OPTION LIKE '%옵션' 을 해야한다
+
+는 사실
 ```
 
 
