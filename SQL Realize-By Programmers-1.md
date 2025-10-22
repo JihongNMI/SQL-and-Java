@@ -87,6 +87,65 @@ JOIN ICECREAM_INFO I ON  F.FLAVOR = I.FLAVOR
     REGEXP_LIKE가 유연하지만 느립니다
 ```
 
+## 5. CASE WHEN
+
+```SQL
+1번째 시도
+
+SELECT CAR_ID,
+    CASE ( START_DATE <= TO_DATE('2022-10-16','YYYY-MM-DD')
+         AND 
+        END_DATE >= TO_DATE('2022-10-16','YYYY-MM-DD') )
+        WHEN TRUE THEN '대여 중'   
+        WHEN FALSE THEN '대여 가능'
+            AS AVAILABILITY
+FROM CAR_RENTAL_COMPANY_RENTAL_HISTORY
+ORDER BY CAR_ID DESC;
+```
+는 에러가 남
+
+CASE( ... )  WHEN은 단순 값 비교고
+
+CASE WHEN ... THEN을 써야한다
+
+```SQL
+2번째 시도
+
+SELECT CAR_ID,
+    CASE WHEN START_DATE <= TO_DATE('2022-10-16','YYYY-MM-DD')
+        AND 
+        END_DATE >= TO_DATE('2022-10-16','YYYY-MM-DD') 
+        THEN '대여 중'   
+        ELSE '대여 가능'
+    END AS AVAILABILITY
+FROM CAR_RENTAL_COMPANY_RENTAL_HISTORY
+ORDER BY CAR_ID DESC;
+```
+
+```SQL
+결과
+SELECT CAR_ID,
+       CASE
+           WHEN COUNT(CASE 
+                          WHEN TO_DATE('2022-10-16', 'YYYY-MM-DD') >= START_DATE
+                           AND TO_DATE('2022-10-16', 'YYYY-MM-DD') <= END_DATE
+                          THEN 1
+                      END) > 0
+           THEN '대여 중'
+           ELSE '대여 가능'
+       END AS AVAILABILITY
+FROM CAR_RENTAL_COMPANY_RENTAL_HISTORY
+GROUP BY CAR_ID
+ORDER BY CAR_ID DESC;
+
+ELSE를 생략해서, 조건에 안 맞으면 NULL 반환하게 해야 함!
+
+COUNT는 NULL은 세지 않으니까
+조건에 맞는 행만 센다!
+
+```
+
+
 # 1. 생각 이상으로 고전한 이유 : 날짜 처리 방법 때문
 
 🤷‍♀️다시 한번 물어볼게
