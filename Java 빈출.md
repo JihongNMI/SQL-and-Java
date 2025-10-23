@@ -22,16 +22,16 @@ for(int i=0; i<intArr.length; i++) {
 
 ```Java
 int[] a = new int[5];
-// 1 2 3 4 5
+// [1, 2, 3, 4, 5]
 
 Item item1 = new Item();
 // 일반적인 메소드 작성
 
 ArrayList<String> list = new ArrayList<>();
-// 김씨 컴공 컴컴 스트링만 가능
+// [김씨, 컴공, 컴컴] 스트링만 가능
 
 ArrayList<Student> list = new ArrayList<>();
-// 김씨 컴공 4 1.2 Student 클래스를 만들어서 그 안에 String이나 int나 double이나 다 넣을 수 있음 
+// [김씨, 컴공, 4, 1.2][이씨, 공학, 3, 2.2] Student 클래스를 만들어서 그 안에 String이나 int나 double이나 다 넣을 수 있음 
 
 /* 넣는 방법
 한줄로 넣기 : list.add(new Student("길동", "컴공", 1, 1.1)); 
@@ -45,5 +45,15 @@ double score = sc.nextDouble();
 Student s = new Student(name, major, num, score);
 list.add(s);
 */
+
+```
+
+# 3. 출 력
+```java
+
+for (Student s : list) {
+	System.out.println(s);
+}
+
 
 ```
