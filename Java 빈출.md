@@ -9,12 +9,13 @@ Scanner sc = new Scanner(System.in);
 String str = sc.next();
 
 패턴 2
+Scanner sc = new Scanner(System.in);
+
 int[] intArr = new int[5];
-		Scanner sc = new Scanner(System.in);
-		System.out.println("배열에 저장할 숫자를 입력해주세요>>");
-		for(int i=0; i<intArr.length; i++) {
-			intArr[i] = sc.nextInt();
-		}
+System.out.println("배열에 저장할 숫자를 입력해주세요>>");
+for(int i=0; i<intArr.length; i++) {
+	intArr[i] = sc.nextInt();
+}
 ```
 
 # 2. 메 소 드 
