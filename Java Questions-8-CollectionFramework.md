@@ -3,6 +3,8 @@
 # 2. 종류
 좋아요! Java 컬렉션 프레임워크에서 자주 쓰이는 **모든 주요 종류와 선언 방법**을 1문장씩 정리해 드릴게요. (Array는 컬렉션 프레임워크는 아니지만 참고용으로 같이 적을게요)
 
+>연습문제에선 ArrayList, Vector, HashMap을 주로 다뤘으니 얼쭈 이 연습에 맞춰서 이미지를 만들어가면 될 듯 하다.
+
 ---
 
 ### **List 계열**
@@ -14,7 +16,7 @@
 
 ### **Set 계열**
 
-* **HashSet** : `Set<Type> set = new HashSet<>();`
+* ✅**HashSet** : `Set<Type> set = new HashSet<>();`
 * **LinkedHashSet** : `Set<Type> set = new LinkedHashSet<>();` (입력 순서 유지)
 * **TreeSet** : `Set<Type> set = new TreeSet<>();` (정렬된 순서 유지)
 
@@ -22,11 +24,11 @@
 
 * **Queue (LinkedList)** : `Queue<Type> queue = new LinkedList<>();`
 * **PriorityQueue** : `Queue<Type> pq = new PriorityQueue<>();` (우선순위 기반)
-* **Deque (ArrayDeque)** : `Deque<Type> deque = new ArrayDeque<>();`
+* ✅**Deque (ArrayDeque)** : `Deque<Type> deque = new ArrayDeque<>();`
 
 ### **Map 계열**
 
-* **HashMap** : `Map<KeyType, ValueType> map = new HashMap<>();`
+* ✅**HashMap** : `Map<KeyType, ValueType> map = new HashMap<>();`
 * **LinkedHashMap** : `Map<KeyType, ValueType> map = new LinkedHashMap<>();` (입력 순서 유지)
 * **TreeMap** : `Map<KeyType, ValueType> map = new TreeMap<>();` (키 기준 정렬)
 * **Hashtable** : `Map<KeyType, ValueType> map = new Hashtable<>();` (구버전, 동기화 지원)
