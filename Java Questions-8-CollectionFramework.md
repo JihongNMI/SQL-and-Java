@@ -33,7 +33,7 @@
 
 ---
 
-# 다 쓰려면 import java.util.*; 지만
+# 2. 다 쓰려면 import java.util.*; 지만, 각각 선언
 
 좋아요! 😄 아까처럼 **Java에서 선언할 때 필요한 import까지 포함해서 1문장씩** 정리해 볼게요.
 
