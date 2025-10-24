@@ -7,7 +7,7 @@
 
 ### **List 계열**
 
-* **ArrayList** : `List<Type> list = new ArrayList<>();`
+* ✅**ArrayList** : `List<Type> list = new ArrayList<>();`
 * **LinkedList** : `List<Type> list = new LinkedList<>();`
 * **Vector** : `List<Type> list = new Vector<>();`
 * **Stack** : `Stack<Type> stack = new Stack<>();` (LIFO 구조, Vector 기반)
