@@ -5,6 +5,7 @@ import java.util.stream.*;
 
 # count 는 long 변환
 
+---
 
 # 1. 스트림이랑 람다식 말인데[기초]
 
