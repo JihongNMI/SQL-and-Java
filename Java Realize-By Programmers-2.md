@@ -1,3 +1,10 @@
+# 0. 스트림 패키지 말인데
+import java.util.*; 는 util 패키지 안에 있는 클래스들만이라서(그 밑에 폴더들의 클래스는 X)
+import java.util.stream.*;
+해야된다
+
+
+
 # 1. 스트림이랑 람다식 말인데[기초]
 
 ```java
