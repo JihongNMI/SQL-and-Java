@@ -29,6 +29,28 @@ class Solution {
   - i는 [바깥에 없는 선언 안 한 변수]를 사용 : 지역변수
 3. toArray도 책에 없음
 
-# 2. ㅇㅇ;
+# 2. 기초2 : Optional 반환의 처리법
 
+```java
+import java.util.stream.IntStream;
+
+class Solution {
+    public int solution(int n) {
+        int answer = IntStream.range(2,n)
+                                .filter(x -> n % x == 1)
+                                .findFirst()
+                                .getAsInt();
+        return answer;
+    }
+}
+
+```
+1. findFirst는 말하자면 반복문의 break 역할을 해준다
+2. 이것도 원래 1️⃣ findFirst() 반환 타입이
+
+기본형 스트림에서는 OptionalInt / OptionalLong / OptionalDouble 객체를 반환, 객체 스트림(Stream<T>)에서는 Optional<T> 반환, Optional: “값이 있을 수도, 없을 수도 있음”을 나타내는 객체
+
+라서 getAsInt()나 orElse(-1);를 사용한다
+
+# 3. 
 
