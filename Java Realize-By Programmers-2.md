@@ -3,7 +3,8 @@ import java.util.*; 는 util 패키지 안에 있는 클래스들만이라서(�
 import java.util.stream.*;
 해야된다
 
-# count 는 long 변환
+# 자동 들여쓰기
+Eclipse에서 자동 들여쓰기: Ctrl + Shift + F (코드 포맷팅)
 
 ---
 
